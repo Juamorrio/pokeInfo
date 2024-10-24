@@ -10,17 +10,22 @@
     background: #F1F2EB;
     position: relative;
     padding: 1.8rem;
-    border: 2px solid #c3c6ce;
     transition: 0.5s ease-out;
     overflow: visible;
+    position: relative;
    }
    
    .card-details {
+    position: absolute;
+    background: #bc3a2d;
     color: black;
-    height: 100%;
-    gap: .5em;
-    display: grid;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius: 20px; 
     place-content: center;
+    justify-items: center;
    }
    
    .card-button {
@@ -45,6 +50,7 @@
    
    /*Text*/
    .text-title {
+    align-items: center;
     font-size: 1.5em;
     font-weight: bold;
    }
@@ -63,6 +69,12 @@
    .card img{
     width: 200px;
     height: 200px;
+   }
+
+   .type img{
+    width: 100px;
+    height: 25px;
+    margin-bottom: 10px;
    }
 
    

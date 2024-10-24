@@ -36,4 +36,17 @@ export const getPokemons = async (l,p) => {
     })
   }
 
-  export default {getPokemons, getPokemon, getType};
+  export const getImageType = async (url) => {
+    return new Promise(function (resolve, reject) {
+      axios.get(url)
+        .then(response => {
+          resolve(response.data)
+        })
+        .catch(error => {
+          console.log('No se puede mostrar los pokemons')
+        })
+    })
+  }
+
+
+  export default {getPokemons, getPokemon, getType, getImageType};
