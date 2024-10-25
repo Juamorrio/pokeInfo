@@ -38,6 +38,7 @@ function Details() {
             dragon: "#7038f8",
             steel: "#b8b8d0",
             fairy: "#f0b6bc",
+            normal: "#999999"
             
         };
 
