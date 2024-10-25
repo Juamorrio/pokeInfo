@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getImageType, getPokemon } from '../api/FantasyEndPoints';
+import { getImageType, getPokemonUrl } from '../api/FantasyEndPoints';
 import './Tarjeta.css';
 
 const Tarjeta = ({pok}) => {
@@ -20,7 +20,7 @@ const Tarjeta = ({pok}) => {
 
 
   const getPokemonTarjeta = async() => {
-    const pokemon = await getPokemon(pok.url); 
+    const pokemon = await getPokemonUrl(pok.url); 
     setPokemon(pokemon);
     setImagen(pokemon.sprites.other['official-artwork']['front_default'])
     const typesList = []

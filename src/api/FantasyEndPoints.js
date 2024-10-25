@@ -12,9 +12,21 @@ export const getPokemons = async (l,p) => {
     })
   }
 
-  export const getPokemon = async (url) => {
+  export const getPokemonUrl = async (url) => {
     return new Promise(function (resolve, reject) {
       axios.get(url)
+        .then(response => {
+          resolve(response.data)
+        })
+        .catch(error => {
+          console.log('No se puede mostrar los pokemons')
+        })
+    })
+  }
+
+  export const getPokemon = async (name) => {
+    return new Promise(function (resolve, reject) {
+      axios.get('https://pokeapi.co/api/v2/pokemon/'+name)
         .then(response => {
           resolve(response.data)
         })
@@ -49,4 +61,4 @@ export const getPokemons = async (l,p) => {
   }
 
 
-  export default {getPokemons, getPokemon, getType, getImageType};
+  export default {getPokemons, getPokemonUrl, getType, getImageType, getPokemon};

@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { getPokemon } from "../api/FantasyEndPoints";
+import './Details.css';
 
 
 function Details() { 
     const {pokemonName} = useParams();
+    const [pokemon, setPokemon] = useState([]);
     const [colorFondo, setColorFondo] = useState([]);
 
     useEffect(() =>{
+        getPokemonInfo();
         getColorFondo();
     }, [])
     console.log(pokemonName)
 
 
+    const getPokemonInfo = async() =>{
+        const respuesta = await getPokemon(pokemonName);
+        setPokemon(respuesta);
 
-    
-
-    const getColorFondo = () =>{
         const typeColors = {
             fire: "#f08030",
             water: "#6890f0",
@@ -37,13 +41,25 @@ function Details() {
             
         };
 
+        console.log(respuesta.types[0].type.name)
+        console.log(typeColors[respuesta.types[0].type.name])
+
+        if(typeColors[respuesta.types[0].type.name]){
+            setColorFondo(typeColors[respuesta.types[0].type.name]);
+        }
+    }
+    
+
+    const getColorFondo = () =>{
+        
+
 
     }
 
 
 
     return(
-        <div className="fondoDetails" style={{ }}>
+        <div className="fondoDetails" style={{background: colorFondo }}>
 
         </div>
     );
