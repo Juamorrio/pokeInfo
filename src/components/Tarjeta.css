@@ -13,6 +13,10 @@
     transition: 0.5s ease-out;
     overflow: visible;
     position: relative;
+    &:hover{
+        transform: scale(1.1);
+    }
+    
    }
    
    .card-details {

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { getImageType, getPokemon } from '../api/FantasyEndPoints';
 import './Tarjeta.css';
 
@@ -40,21 +41,23 @@ const Tarjeta = ({pok}) => {
   }
 
   return (
-  <div class="col custom-col mb-3">
-      <div class="card">
-        <img  src = {imagen}></img>
-        <div class="card-details">
-          <p class="text-title">{pokemon.name}</p>
-          <div className='type'>
-            {imagesTypes.map((type, index) => {
-                return (
-                    <img  key={index} src={type} alt={`Imagen ${index}`} />
-                );
-            })}
-          </div>  
-        </div>
-</div>
-</div>
+    <Link to={'/details/'+ pokemon.name}>
+      <div class="col custom-col mb-3">
+          <div class="card">
+            <img  src = {imagen}></img>
+            <div class="card-details">
+              <p class="text-title">{pokemon.name}</p>
+              <div className='type'>
+                {imagesTypes.map((type, index) => {
+                    return (
+                        <img  key={index} src={type} alt={`Imagen ${index}`} />
+                    );
+                })}
+              </div>  
+            </div>
+      </div>
+    </div>
+</Link>
 
     
   )
