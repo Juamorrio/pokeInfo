@@ -1,4 +1,129 @@
 .fondoDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
   }
+
+.cartaPokemon{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  width: 1000px;
+  height: 800px;
+  background: #001923;
+  border-radius: 25px;
+}
+
+.cartaPokemon img{
+  width: 150px;
+  height: 150px;
+  margin-top: 30px;
+}
+
+.statsContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  height: 20px;
+}
+
+.hpContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.attackContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.defenseContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.sAttackContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.sDefenseContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.speedContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.hp{
+  border-radius: 12px;
+}
+
+.hp p{
+  font-size: 100px;
+  align-self: center;
+}
+
+.attack{
+  border-radius: 12px;
+}
+
+.attack p{
+  font-size: 100px;
+  align-self: center;
+}
+
+.defense{
+  border-radius: 12px;
+}
+
+.defense p{
+  font-size: 100px;
+  align-self: center;
+}
+
+.sAttack{
+  border-radius: 12px;
+}
+
+.sAttack p{
+  font-size: 100px;
+  align-self: center;
+}
+
+.sDefense{
+  border-radius: 12px;
+}
+
+.sDefense p{
+  font-size: 100px;
+  align-self: center;
+}
+
+.speed{
+  border-radius: 12px;
+}
+
+.speed p{
+  font-size: 100px;
+  align-self: center;
+}
