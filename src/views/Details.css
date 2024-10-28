@@ -12,8 +12,8 @@
   align-items: center;
   flex-direction: column;
   gap: 50px;
-  width: 1000px;
-  height: 800px;
+  width: 800px;
+  height: 600px;
   background: #001923;
   border-radius: 25px;
 }
